@@ -9,10 +9,10 @@ body {
     height: 100vh;
 }
 
-#search-container {
-    position: relative;
-    width: 100%;
+.container {
+    width: 80%;
     max-width: 400px;
+    transition: transform 0.3s ease; /* Add a transition for smooth animation */
 }
 
 #search {
@@ -23,11 +23,7 @@ body {
     border-radius: 5px;
 }
 
-/* Add a fixed position to the search bar */
-#search.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
+/* Add a class to move the container to the top when active */
+.container.active {
+    transform: translateY(-50%); /* Adjust the value as needed */
 }
